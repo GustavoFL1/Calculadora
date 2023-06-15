@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta hhtp-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="estilo.css">
+    <title>Calculadora</title>
+
+</head>
+
+<body>
+    <div class="estilo">
+        <form name="mainform">
+            <div class="heading">
+                <span><i class="fa-solid fa-bars"></i></span>
+                <span>Calculadora</span>
+                <label>
+                    <input type="checkbox" name="theme" id="checkbox">
+                    <span class="btn"></span>
+                    <i class="fa-solid fa-moon"></i>
+                </label>
+            </div>
+            <div class="result">
+                <input type="text" name="display">
+            </div>
+            <div id="keyboard">
+                <div class="group">
+                    <div class="top-section">
+                        <input type="button" value="AC" name="btn-ac" id="operator" onclick="ac()">
+                        <input type="button" value="&#xf55a" class="fas fa-backspace" name="btn-del" id="operator"
+                            onclick="del()">
+                        <input type="button" value="/" name="btn-/" id="operator" onclick="main('/')">
+                    </div>
+                    <div class="middle-section">
+                        <input type="button" value="7" name="btn-7" onclick="main('7')">
+                        <input type="button" value="8" name="btn-8" onclick="main('8')">
+                        <input type="button" value="9" name="btn-9" onclick="main('9')">
+
+                        <input type="button" value="4" name="btn-4" onclick="main('4')">
+                        <input type="button" value="5" name="btn-5" onclick="main('5')">
+                        <input type="button" value="6" name="btn-6" onclick="main('6')">
+
+                        <input type="button" value="1" name="btn-1" onclick="main('1')">
+                        <input type="button" value="2" name="btn-2" onclick="main('2')">
+                        <input type="button" value="3" name="btn-3" onclick="main('3')">
+
+                        <input type="button" value="0" name="btn-0" onclick="main('0')">
+                        <input type="button" value="00" name="btn-00" onclick="main('00')">
+                        <input type="button" value="." name="btn-pt" onclick="main('.')">
+                    </div>
+                </div>
+                <div class="side-section">
+                    <input type="button" value="x" name="btn-*" onclick="main('*')" id="operator">
+                    <input type="button" value="+/-" class="op_key" op="negate" onclick="negate()" id="operator">
+                    <input type="button" value="-" name="btn--" onclick="main('-')" id="operator">
+                    <input type="button" value="+" name="btn-+" onclick="main('+')" id="operator">
+                    <input type="button" value="=" name="btn-equal" onclick="equal()" class="equal" id="operator">
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
